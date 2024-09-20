@@ -1,0 +1,139 @@
+[
+    {
+        "faction": "Skaven of Clan Eshin",
+        "race": "Skaven",
+        "warriors": [
+            {
+                "type": "Assassin Adept",
+                "statistics": [ 6, 4, 4, 4, 3, 1, 5, 1, 7 ],
+                "hero": true,
+                "large": false,
+                "minQuantity": 1,
+                "maxQuantity": 1,
+                "cost": 60,
+                "experience": 20,
+                "specialRules": [
+                    {
+                        "name":"Leader",
+                        "description": [ "Any warrior within 6\" of the Assassin Adept may use his Leadership instead of his own." ]
+                    },
+                    {
+                        "name": "Perfect Killer",
+                        "description": [ "An Assassin Adept always has an extra -1 modifier to any armour save the enemy has to take against wounds they inflicted (both with shooting and close combat weapons)." ]
+                    }
+                ],
+                "skills": [],
+                "inventory": []
+            },
+            {
+                "type": "Black Skaven",
+                "statistics": [ 6, 4, 3, 4, 3, 1, 5, 1, 6 ],
+                "hero": true,
+                "large": false,
+                "minQuantity": 0,
+                "maxQuantity": 2,
+                "cost": 40,
+                "experience": 8,
+                "specialRules": [],
+                "skills": [],
+                "inventory": []
+            },
+            {
+                "type": "Eshin Sorcerer",
+                "statistics": [ 5, 3, 3, 3, 3, 1, 4, 1, 6 ],
+                "hero": true,
+                "large": false,
+                "minQuantity": 0,
+                "maxQuantity": 1,
+                "cost": 45,
+                "experience": 8,
+                "specialRules": [
+                    {
+                        "name": "Magic User",
+                        "description": [ "The Eshin Sorcerer has the ability to use magic and casts spells like any other magicians, and the Eshin Sorcerer starts with one spells generated at random from the Magic of the Horned Rat. In addition the Eshin Sorcerer may learn a new Spell instead on a new skill." ]
+                    }
+                ],
+                "skills": [],
+                "inventory": []
+            },
+            {
+                "type": "Night Runner",
+                "statistics": [ 6, 2, 3, 3, 3, 1, 4, 1, 4 ],
+                "hero": true,
+                "large": false,
+                "minQuantity": 0,
+                "maxQuantity": 2,
+                "cost": 20,
+                "experience": 0,
+                "specialRules": [],
+                "skills": [],
+                "inventory": []
+            },
+            {
+                "type": "Verminkin",
+                "statistics": [ 5, 3, 3, 3, 3, 1, 4, 1, 5 ],
+                "hero": false,
+                "large": false,
+                "minQuantity": 0,
+                "maxQuantity": 0,
+                "cost": 20,
+                "experience": 0,
+                "specialRules": [],
+                "skills": [],
+                "inventory": []
+            },
+            {
+                "type": "Giant Rats",
+                "statistics": [ 6, 2, 0, 3, 3, 1, 4, 1, 4 ],
+                "hero": false,
+                "large": false,
+                "minQuantity": 0,
+                "maxQuantity": 0,
+                "cost": 15,
+                "experience": 0,
+                "specialRules": [
+                    {
+                        "name": "Pack Size",
+                        "description": [ "You can recruit as many Giant Rats as you wish." ]
+                    },
+                    {
+                        "name": "Experience",
+                        "description": [ "Giant Rats are animals and do not gain experience." ]
+                    }
+                ],
+                "skills": [],
+                "inventory": []
+            },
+            {
+                "type": "Rat Ogre",
+                "statistics": [ 6, 3, 3, 5, 5, 3, 4, 3, 4 ],
+                "hero": false,
+                "large": true,
+                "minQuantity": 0,
+                "maxQuantity": 1,
+                "cost": 210,
+                "experience": 0,
+                "specialRules": [
+                    {
+                        "name": "Fear",
+                        "description": [ "Rat Ogres are so frightening they cause fear." ]
+                    },
+                    {
+                        "name": "Stupidity",
+                        "description": [ "A Rat Ogre is subject to stupidity unless a Skaven Hero is within 6\" of it." ]
+                    },
+                    {
+                        "name": "Experience",
+                        "description": [ "Rat Ogres do not gain experience." ]
+                    },
+                    {
+                        "name": "Large Target",
+                        "description": [ "Rat Ogres are Large Targets as defined in the shooting rules." ]
+                    }
+                ],
+                "skills": [],
+                "inventory": []
+            }
+        ]
+    }
+]
