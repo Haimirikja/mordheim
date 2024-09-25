@@ -135,11 +135,23 @@ class Warband {
         const groupList = document.createElement("div");
         groupList.appendChild(this.roster.toHTML());
         // event to add warrior to group
+        groupList.querySelectorAll(".SelectWarrior").forEach(select => {
+            const group = select.closest(".mordheim-warband-group");
+            const groupId = group.id;
+            const selectableWarriors = this.warriors.filter(x => groupId.indexOf("hero") >= 0 ? x.hero : !x.hero && (x.maxQuantity === 0 || x.maxQuantity > this.roster.groups.filter(g => g.warrior?.id === x.id).length));
+            selectableWarriors.forEach(warrior => {
+                const warriorOption = document.createElement("option");
+                warriorOption.setAttribute("value", warrior.id);
+                warriorOption.appendChild(document.createTextNode(warrior.type));
+                select.appendChild(warriorOption);
+            });
+        });
         groupList.querySelectorAll(".AddWarrior").forEach(button => {
             button.addEventListener('click', (e) => {
                 const group = e.currentTarget.closest(".mordheim-warband-group");
                 const groupId = group.id;
-                if (!this.roster.groups.find(x => x.id === groupId).addWarrior(groupId.indexOf("hero") >= 0 ? this.warriors[0] : this.warriors[4])) return;
+                const selectedWarrior = group.querySelector(".SelectWarrior")?.value;
+                if (!this.roster.groups.find(x => x.id === groupId).addWarrior(this.warriors.find(x => x.id === selectedWarrior))) return;
                 roster.innerHTML = null;
                 roster.appendChild(this.rosterToHTML());
             });

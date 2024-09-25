@@ -118,12 +118,23 @@ class RosterGroup {
                     warriorList.append(warr);
                 }
             }
-            if (this.warriorCount < 5) {
+            if (this.warriorCount < (this.warrior?.maxQuantity > 0 ? this.warrior.maxQuantity : 5)) {
+                if (!this.warrior) {
+                    const selectWarrior = document.createElement("select");
+                    selectWarrior.classList.add("mordheim-select");
+                    selectWarrior.classList.add("SelectWarrior");
+                    header.appendChild(selectWarrior);
+                }
                 const add = document.createElement("div");
                 add.classList.add("mordheim-button");
                 add.classList.add("AddWarrior");
                 add.appendChild(document.createTextNode("+"));
-                warriorList.append(add);
+                header.appendChild(add);
+                // const add = document.createElement("div");
+                // add.classList.add("mordheim-button");
+                // add.classList.add("AddWarrior");
+                // add.appendChild(document.createTextNode("+"));
+                // warriorList.append(add);
             }
         }
         info.appendChild(warriorList);
